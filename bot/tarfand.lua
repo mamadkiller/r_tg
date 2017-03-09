@@ -239,7 +239,6 @@ function create_config( )
     "on-off",
     "idme",
     "dlpl",
-    "clean_delete_ac",
     "chat",
     "note"
     
