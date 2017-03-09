@@ -59,32 +59,32 @@ local function pre_process(msg)
 	end
 	if tonumber(timetoexpire) == 3 then
 		if redis:hget('expires3',msg.to.id) then return msg end
-		send_large_msg(get_receiver(msg), '<i>✨3 روز تا پایان تاریخ انقضای گروه باقی مانده است✨\n✨نسبت به تمدید اقدام کنید✨\n✨ایدی جهت تمدید: @PunisherTM✨</i>')
+		send_large_msg(get_receiver(msg), '<i>✨3 روز تا پایان تاریخ انقضای گروه باقی مانده است✨\n✨نسبت به تمدید اقدام کنید✨\n✨ایدی جهت تمدید: @mamadkiller✨</i>')
 		redis:hset('expires3',msg.to.id,'5')
 	end
 	if tonumber(timetoexpire) == 4 then
 		if redis:hget('expires4',msg.to.id) then return msg end
-		send_large_msg(get_receiver(msg), '<i>✨4 روز تا پایان تاریخ انقضای گروه باقی مانده است✨\n✨نسبت به تمدید اقدام کنید✨\n✨ایدی جهت تمدید: @PunisherTM✨</i>')
+		send_large_msg(get_receiver(msg), '<i>✨4 روز تا پایان تاریخ انقضای گروه باقی مانده است✨\n✨نسبت به تمدید اقدام کنید✨\n✨ایدی جهت تمدید: @mamadkiller✨</i>')
 		redis:hset('expires4',msg.to.id,'5')
 	end
 	if tonumber(timetoexpire) == 5 then
 		if redis:hget('expires5',msg.to.id) then return msg end
-		send_large_msg(get_receiver(msg), '<i>✨5 روز تا پایان تاریخ انقضای گروه باقی مانده است✨\n✨نسبت به تمدید اقدام کنید✨\n✨ایدی جهت تمدید: @PunisherTM✨\n✨ </i>')
+		send_large_msg(get_receiver(msg), '<i>✨5 روز تا پایان تاریخ انقضای گروه باقی مانده است✨\n✨نسبت به تمدید اقدام کنید✨\n✨ایدی جهت تمدید: @mamadkiller✨\n✨ </i>')
 		redis:hset('expires5',msg.to.id,'5')
 	end
 end
 return msg
 end
 function run(msg, matches)
-	if matches[1]:lower() == 'setexpire' then
+	if matches[1]:lower() == 'تنظیم انقضا' then
 		if not is_sudo(msg) then return end
 		local time = os.time()
 		local buytime = tonumber(os.time())
 		local timeexpire = tonumber(buytime) + (tonumber(matches[2]) * 86400)
 		redis:hset('expiretime',get_receiver(msg),timeexpire)
-		return "<i>✨تاریخ انقضای گروه✨:\n✨به "..matches[2].. " روز دیگر تنظیم شد.\n ایدی : @PunisherTM ✨</i>"
+		return "<i>✨تاریخ انقضای گروه✨:\n✨به "..matches[2].. " روز دیگر تنظیم شد.\n ایدی : @mamadkiller ✨</i>"
 	end
-	if matches[1]:lower() == 'expire' then
+	if matches[1]:lower() == 'انقضا' then
 		local expiretime = redis:hget ('expiretime', get_receiver(msg))
 		if not expiretime then return 'تاریخ ست نشده است' else
 			local now = tonumber(os.time())
@@ -95,10 +95,10 @@ function run(msg, matches)
 end
 return {
   patterns = {
-    "^([Ss]etexpire) (.*)$",
-	"^([Ee]xpire)$",
-		    "^[/!#]([Ss]etexpire) (.*)$",
-	"^[/!#]([Ee]xpire)$",
+    "^(تنظیم انقضا) (.*)$",
+	"^(انقضا)$",
+		    "^[/!#](تنظیم انقضا) (.*)$",
+	"^[/!#](انقضا)$",
   },
   run = run,
   pre_process = pre_process
