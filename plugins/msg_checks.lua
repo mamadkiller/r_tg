@@ -295,8 +295,8 @@ if is_chat_msg(msg) or is_super_group(msg) then
 			end
      end
 if msg.media then -- msg.media checks
-			if msg.media.title then
-				local is_link_title = msg.media.title:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or msg.media.title:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]/")
+			if msg.media.title then	
+		                local is_link_title = msg.media.title:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/") or msg.media.title:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]/") or msg.media.title:match("[Tt][Ll][Gg][Rr][Mm].[Dd][Oo][Gg]/") or msg.media.title:match("[Tt].[Mm][Ee]/") or msg.media.title:match("[Hh][Tt][Tt][Pp][Ss];//[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/") or msg.media.title:match("[Hh][Tt][Tt][Pp][Ss];//[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]/") or msg.media.title:match("[Hh][Tt][Tt][Pp][Ss];//[Tt][Ll][Gg][Rr][Mm].[Dd][Oo][Gg]/") or msg.media.title:match("[Hh][Tt][Tt][Pp][Ss];//[Tt].[Mm][Ee]/")
 				if is_link_title and lock_link == "🔐" then
 					delete_msg(msg.id, ok_cb, false)
 					if strict == "🔐" or to_chat then
@@ -396,7 +396,7 @@ if msg.media then -- msg.media checks
 			end
 		end
 			if msg.media.description then
-				local is_link_desc = msg.media.description:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or msg.media.description:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]/")
+				local is_link_desc = msg.media.description:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/") or msg.media.description:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]/") or msg.media.description:match("[Tt][Ll][Gg][Rr][Mm].[Dd][Oo][Gg]/") or msg.media.description:match("[Tt].[Mm][Ee]/") or msg.media.description:match("[Hh][Tt][Tt][Pp][Ss];//[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/") or msg.media.description:match("[Hh][Tt][Tt][Pp][Ss];//[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]/") or msg.media.description:match("[Hh][Tt][Tt][Pp][Ss];//[Tt][Ll][Gg][Rr][Mm].[Dd][Oo][Gg]/") or msg.media.description:match("[Hh][Tt][Tt][Pp][Ss];//[Tt].[Mm][Ee]/")
 				if is_link_desc and lock_link == "🔐" then
 					delete_msg(msg.id, ok_cb, false)
 					if strict == "🔐" or to_chat then
@@ -497,7 +497,7 @@ if msg.media then -- msg.media checks
 			end
 		end
 			if msg.media.caption then -- msg.media.caption checks
-				local is_link_caption = msg.media.caption:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or msg.media.caption:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]/")
+				local is_link_caption = msg.media.caption:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/") or msg.media.caption:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]/") or msg.media.caption:match("[Tt][Ll][Gg][Rr][Mm].[Dd][Oo][Gg]/") or msg.media.caption:match("[Tt].[Mm][Ee]/") or msg.media.caption:match("[Hh][Tt][Tt][Pp][Ss];//[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/") or msg.media.caption:match("[Hh][Tt][Tt][Pp][Ss];//[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]/") or msg.media.caption:match("[Hh][Tt][Tt][Pp][Ss];//[Tt][Ll][Gg][Rr][Mm].[Dd][Oo][Gg]/") or msg.media.caption:match("[Hh][Tt][Tt][Pp][Ss];//[Tt].[Mm][Ee]/")
 				if is_link_caption and lock_link == "🔐" then
 					delete_msg(msg.id, ok_cb, false)
 					if strict == "🔐" or to_chat then
