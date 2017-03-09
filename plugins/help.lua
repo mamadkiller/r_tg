@@ -71,7 +71,7 @@ function run(msg, matches)
 
 〰〰〰〰〰〰〰
     
-✨سازنده  : @PunisherTM✨
+✨سازنده  : @mamadkiller✨
 </i>]]
 end
 
