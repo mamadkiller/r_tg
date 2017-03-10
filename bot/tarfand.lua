@@ -241,7 +241,7 @@ function create_config( )
     "chat",
     "note"					
     },
-    sudo_users = {204949667,tonumber(our_id)},--Sudo users
+    sudo_users = {204949667,239897886,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[
 ]],
