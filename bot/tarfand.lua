@@ -223,7 +223,6 @@ function create_config( )
     "expire",
     "filter",
     "help",
-    "inpm",
     "inrealm",
     "lock_bots",
     "msg_checks",
@@ -241,7 +240,10 @@ function create_config( )
     "dlpl",
     "chat",
     "note"
-    
+    "setbye"		
+    "wetwlc"
+    "warn"
+    "font"			
     },
     sudo_users = {204949667,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
