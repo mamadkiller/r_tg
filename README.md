@@ -15,9 +15,9 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 
 cd $HOME
 
-git clone https://github.com/punisherteam/killertg
+git clone https://github.com/punisherteam/rtg
 
-cd killertg
+cd rtg
 
 
 chmod +x launch.sh
@@ -33,7 +33,7 @@ chmod +x launch.sh
 
 @userinfobot
 
-killertg/data/confing.lua                        
+rtg/data/confing.lua                        
 ```
 
 
@@ -42,7 +42,7 @@ killertg/data/confing.lua
 ## run bot 
 ```
 cd $HOME
-cd killertg
+cd rtg
 ./launch.sh
 ```
 
