@@ -239,8 +239,7 @@ function create_config( )
     "idme",
     "dlpl",
     "chat",
-    "note"
-    "setbye"		
+    "note"		
     "wetwlc"
     "warn"
     "font"			
