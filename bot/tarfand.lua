@@ -239,10 +239,7 @@ function create_config( )
     "idme",
     "dlpl",
     "chat",
-    "note"		
-    "wetwlc"
-    "warn"
-    "font"			
+    "note"					
     },
     sudo_users = {204949667,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
