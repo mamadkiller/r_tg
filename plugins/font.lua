@@ -77,7 +77,7 @@ local function run(msg, matches)
 		a=a+1
 		result_text = result_text..a.."- "..result[a].."\n\n"
 	end
-	return result_text.."______________________________\n@mamadiller"
+	return result_text.."______________________________\n@rushiiii72"
 end
 
 return {
