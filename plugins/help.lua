@@ -74,7 +74,7 @@ function run(msg, matches)
     زیبا نویسی نوشته
 〰〰〰〰〰〰〰 
     
-✨سازنده  : @mamadkiller✨
+✨سازنده  : @rushiiii72✨
 </i>]]
 end
 
